@@ -85,7 +85,7 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-start bg-gray-50 p-4 relative">
-      <h1 className="text-2xl font-bold mb-4">代码复制粘贴</h1>
+      <h1 className="text-2xl font-bold mb-4">code copy</h1>
       <textarea
         className="w-full max-w-md h-40 p-2 border border-gray-300 rounded-md mb-4 resize-none"
         value={text}
