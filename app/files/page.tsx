@@ -3,11 +3,12 @@
 import { useState, useEffect } from "react";
 import { storage, generateId } from "@/lib/appwrite";
 import { Button } from "@/components/ui/button";
+import type { Models } from "appwrite";
 
 const bucketId = process.env.NEXT_PUBLIC_APPWRITE_BUCKET_ID!;
 
 export default function FilesPage() {
-  const [files, setFiles] = useState<any[]>([]);
+  const [files, setFiles] = useState<Models.File[]>([]);
   const [uploading, setUploading] = useState(false);
   const [selectedFiles, setSelectedFiles] = useState<Set<string>>(new Set());
 
