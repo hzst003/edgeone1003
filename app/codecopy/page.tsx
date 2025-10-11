@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { supabase } from "@/lib/supabase";
+import ReactMarkdown from "react-markdown";
 
 export default function HomePage() {
   const [text, setText] = useState("");
@@ -35,9 +36,15 @@ export default function HomePage() {
     loadHistory();
   }, []);
 
-  const handleCopy = async () => {
+  // 复制文本和 HTML（保留格式）
+  const handleCopy = async (content: string = text) => {
     try {
-      await navigator.clipboard.writeText(text);
+      await navigator.clipboard.write([
+        new ClipboardItem({
+          "text/plain": new Blob([content], { type: "text/plain" }),
+          "text/html": new Blob([content], { type: "text/html" }),
+        }),
+      ]);
       showMessage("已复制到剪贴板!");
     } catch {
       showMessage("复制失败");
@@ -74,15 +81,6 @@ export default function HomePage() {
     }
   };
 
-  const handleCopyHistory = async (content: string) => {
-    try {
-      await navigator.clipboard.writeText(content);
-      showMessage("历史记录已复制!");
-    } catch {
-      showMessage("复制失败");
-    }
-  };
-
   return (
     <div className="min-h-screen flex flex-col items-center justify-start bg-gray-50 p-4 relative">
       <h1 className="text-2xl font-bold mb-4">code copy</h1>
@@ -93,7 +91,7 @@ export default function HomePage() {
         placeholder="在这里输入内容..."
       />
       <div className="flex gap-4 mb-6">
-        <Button onClick={handleCopy} className={buttonClass}>复制</Button>
+        <Button onClick={() => handleCopy()} className={buttonClass}>复制</Button>
         <Button onClick={handlePaste} className={buttonClass}>粘贴</Button>
         <Button onClick={handleSave} className={buttonClass}>保存</Button>
       </div>
@@ -107,15 +105,16 @@ export default function HomePage() {
               className="bg-white p-3 rounded-lg shadow-sm flex justify-between items-start hover:shadow-md transition-shadow"
             >
               <div
-                className="flex-1 mr-3 break-words cursor-pointer"
+                className="flex-1 mr-3 break-words cursor-pointer whitespace-pre-wrap"
                 onClick={() => setText(item.content)}
               >
-                {item.content}
+                {/* 支持 Markdown 渲染 */}
+                <ReactMarkdown>{item.content}</ReactMarkdown>
               </div>
               <div className="flex flex-col gap-1">
                 <button
                   className="text-blue-500 hover:text-blue-700 text-sm"
-                  onClick={() => handleCopyHistory(item.content)}
+                  onClick={() => handleCopy(item.content)}
                 >
                   复制
                 </button>

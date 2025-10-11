@@ -74,11 +74,20 @@ export default function FilesPage() {
   };
 
   // 批量下载
-  const handleBatchDownload = () => {
+/*   const handleBatchDownload = () => {
     files
       .filter((f) => selectedFiles.has(f.$id))
       .forEach((f) => handleDownload(f.$id, f.name));
-  };
+  }; */
+
+  const handleBatchDownload = () => {
+  const selected = files.filter((f) => selectedFiles.has(f.$id));
+  selected.forEach((f, i) => {
+    setTimeout(() => {
+      handleDownload(f.$id, f.name);
+    }, i * 800); // 每个文件间隔 0.8 秒
+  });
+};
 
   // 批量删除
   const handleBatchDelete = async () => {
@@ -92,7 +101,7 @@ export default function FilesPage() {
 
   return (
     <div className="p-6 max-w-4xl mx-auto space-y-6">
-      <h1 className="text-2xl font-semibold mb-4">📂 文件管理系统</h1>
+      <h1 className="text-2xl font-semibold mb-4">📂 文件管理</h1>
 
       <div className="flex items-center space-x-2">
         <input
