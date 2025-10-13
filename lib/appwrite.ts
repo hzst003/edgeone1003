@@ -12,9 +12,3 @@ export const BUCKET_ID = process.env.NEXT_PUBLIC_APPWRITE_BUCKET_ID!;
 export const databases = new Databases(client);
 
 
-export interface Post {
-  $id: string;
-  $createdAt: string;
-  name: string;
-  code: string;
-}
