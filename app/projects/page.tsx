@@ -4,17 +4,9 @@ import { Button } from "@mui/material";
 import React, { useEffect, useState, useMemo } from "react";
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
 import { Client, Databases, Query } from "appwrite";
+import type { AppwriteDocument } from "@/lib/appwrite"; // 重新导出 Document 类型
+import type { Project, ProjectCreate } from "@/lib/appwrite"; // 重新导出 Document 类型
 
-type Project = {
-  $id: string;
-  code: string;
-  name: string;
-  name_company: string;
-  workflow: string;
-  node: string;
-  manager: string;
-  custom_status: string;
-};
 
 // ✅ 初始化 Appwrite 客户端
 const client = new Client()
