@@ -71,7 +71,7 @@ function CardSide({ title, description, href, thumbnail, badge, external, cardda
 const ITEMS = [
     { title: "代码拷贝", description: "复制粘贴                                          ****", href: "/codecopy", thumbnail: "/images/codecopy.png", carddate: "2025-10-09更新" },
     { title: "文件管理", description: "文件上传下载             *******", href: "/files", thumbnail: "/images/zipdownload.png" },
-    { title: "表格v01", description: "工程信息                                              ****", href: "/0906projects", thumbnail: "/images/logowasu.png", carddate: "2025-09-08更新" },
+    { title: "表格v01", description: "工程信息                                              ****", href: "/projects", thumbnail: "/images/logowasu.png", carddate: "2025-10-13更新" },
 ];
 
 // ------------------ 页面 ------------------

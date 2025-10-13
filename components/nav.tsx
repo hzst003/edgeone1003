@@ -7,7 +7,7 @@ import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/s
 import { Separator } from "@/components/ui/separator"
 import { Menu } from "lucide-react"
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
-
+import Image from "next/image";
 export default function Navbar() {
   const [open, setOpen] = useState(false)
 
@@ -22,8 +22,16 @@ export default function Navbar() {
     <nav className="w-full border-b bg-white sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex h-16 items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="text-2xl font-bold text-gray-800">
-          MySite
+        <Link href="/" aria-label="返回首页" className="inline-flex items-center gap-3">
+          <Image
+            src="/qrcode.png"    // 放在 public/logo.svg
+            alt="MySite Logo"
+            width={40}
+            height={40}
+            priority={true}
+            style={{ height: "auto" }}
+          />
+          <span className="text-2xl font-bold text-gray-800">MySite</span>
         </Link>
 
         {/* Desktop Menu */}
