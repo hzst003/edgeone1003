@@ -70,23 +70,9 @@ function CardSide({ title, description, href, thumbnail, badge, external, cardda
 // ------------------ 数据 ------------------
 const ITEMS = [
    { title: "镜像", description: "提速                                     ****", href: "/edgeone", thumbnail: "/images/logowasu.png", carddate: "2025-10-13更新" },
-    { title: "表格v01", description: "工程信息（功能少快速）                                         ****", href: "/0906projects", thumbnail: "/images/logowasu.png", carddate: "2025-09-08更新" },
-    { title: "表格v03", description: "工程信息（慢速）                                         ****", href: "/0923xdatagrid", thumbnail: "/images/logowasu.png", carddate: "2025-09-24更新" },
-    { title: "xlsx", description: "上传单份xlsx并显示（支持多sheet）                                    ****", href: "/xlsxupload0924", thumbnail: "/images/xlsxupload.png", carddate: "2025-09-24更新" },    
-    { title: "工程量与施工人", description: "至2025-ST-137分册     *****    *************    ", href: "/workermoney", thumbnail: "/images/chineseyuan.png", carddate: "2025-08-29"   },    
-    { title: "下载", description: "融合专线未上传部分                                     ***", href: "/rhzx0813",                          thumbnail: "/images/xlsxdownload.png", carddate: "2025-08-13" },
-    { title: "图纸查询", description: "2023--2025年157分册图纸                            ***", href: "/0708",                         thumbnail: "/images/pdfdownload.png", carddate: "2025-08-20更新"  },
-    { title: "代维井信息", description: "代维井信息查看，拱墅区部分                         ***",  href: "/daiwei0612", thumbnail: "/images/well.jpg", carddate: "2025-06-13" },
-     { title: "原链接", description: "未修改之前          页面链接                         ***",  href: "/p0820", thumbnail: "/images/naturallink.png", carddate: "2025-08-20" },
-    { title: "全局搜索", description: "至2025-162分册 支持多关健字与减号(-) ****高亮匹配与跳转。", href: "/comprehensivesearch", thumbnail: "/images/Internetsearch.png", carddate: "2025-09-26更新" },
-    { title: "文章", description: "                                                       ****", href: "/blog", thumbnail: "/images/blog1.png", carddate: "2025-08-25" },
-    { title: "xlsx", description: "批量上传xlsx并显示                                      ****", href: "/xlsxupload0910", thumbnail: "/images/xlsxupload.png", carddate: "2025-09-10更新" },    
-    { title: "微型服务器", description: "首次运行时有病毒提示，可忽略                       ***", href: "/微型服务器.zip", thumbnail: "/images/zipdownload.png", carddate: "2025-05-08" },
-    { title: "截屏", description: "后台截屏，每秒一张                                     ***", href: "/screenshot0708.zip", badge: "热门", thumbnail: "/images/zipdownload.png", carddate: "2025-07-08" },
-    { title: "智能工具", description: "代码生成、**********批量操作与自动化流程。                ", href: "/ai-tools", badge: "AI", thumbnail: "/images/thumb-ai.jpg" },    
-    { title: "安全中心", description: "权限、角色与审计日志，保护你的业务数据。             *******", href: "/security", thumbnail: "/images/thumb-security.jpg" },    
-    { title: "表格v02", description: "工程信息（淘汰版）                                         ****", href: "/0915mrt", thumbnail: "/images/logowasu.png", carddate: "2025-09-16更新" },
-];
+    { title: "表格v01", description: "工程信息                                         ****", href: "https://edgeone.hzst.online/projects", thumbnail: "/images/logowasu.png", carddate: "2025-09-08更新" },
+    { title: "文件管理", description: "上传下载                                         ****", href: "https://edgeone.hzst.online/files", thumbnail: "/images/zipdownload.png", carddate: "2025-10-14更新" },
+]
 
 // ------------------ 页面 ------------------
 export default function CardGallery() {
