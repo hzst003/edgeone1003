@@ -69,9 +69,9 @@ function CardSide({ title, description, href, thumbnail, badge, external, cardda
 
 // ------------------ 数据 ------------------
 const ITEMS = [
-   { title: "镜像", description: "提速                                     ****", href: "/edgeone", thumbnail: "/images/logowasu.png", carddate: "2025-10-13更新" },
-    { title: "表格v01", description: "工程信息                                         ****", href: "https://edgeone.hzst.online/projects", thumbnail: "/images/logowasu.png", carddate: "2025-09-08更新" },
-    { title: "文件管理", description: "上传下载                                         ****", href: "https://edgeone.hzst.online/files", thumbnail: "/images/zipdownload.png", carddate: "2025-10-14更新" },
+   { title: "代码拷贝", description: "copy                                     ****", href: "/codecopy", thumbnail: "/images/codecopy.png", carddate: "2025-10-13更新" },
+    { title: "表格v01", description: "工程信息                                         ****", href: "/projects", thumbnail: "/images/logowasu.png", carddate: "2025-09-08更新" },
+    { title: "文件管理", description: "上传下载                                         ****", href: "/files", thumbnail: "/images/zipdownload.png", carddate: "2025-10-14更新" },
 ]
 
 // ------------------ 页面 ------------------
