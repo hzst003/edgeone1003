@@ -26,12 +26,12 @@ export default function Navbar() {
           <Image
             src="/qrcode.png"    // 放在 public/logo.svg
             alt="MySite Logo"
-            width={40}
-            height={40}
+            width={45}
+            height={45}
             priority={true}
             style={{ height: "auto" }}
           />
-          <span className="text-2xl font-bold text-gray-800">MySite</span>
+          <span className="text-2xl font-bold text-gray-800">Ai 建站</span>
         </Link>
 
         {/* Desktop Menu */}
