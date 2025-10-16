@@ -1,9 +1,10 @@
 "use client";
 
 import React, { useEffect, useState, useMemo, useCallback } from "react";
-import { Client, Databases, Query } from "appwrite";
 
-type Record = {
+import { Client, Databases, Query, Models } from "appwrite";
+
+type Record = Models.Document & {
   $id: string;
   photo: string | null;
   location: string | null;
