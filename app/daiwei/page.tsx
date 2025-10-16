@@ -137,7 +137,7 @@ export default function RecordsPage() {
               <th className="border px-2 py-1 text-center w-12">#</th>
               <th className="border px-2 py-1">照片</th>
               <th className="border px-2 py-1">
-                地点
+                地点(预览退出按ESC)
                 <input
                   type="text"
                   className="mt-1 w-full border rounded px-1 py-0.5 text-xs"
@@ -185,7 +185,7 @@ export default function RecordsPage() {
                 />
               </th>
               <th className="border px-2 py-1">
-                负责人
+                道路1
                 <input
                   type="text"
                   className="mt-1 w-full border rounded px-1 py-0.5 text-xs"
@@ -197,7 +197,7 @@ export default function RecordsPage() {
                 />
               </th>
               <th className="border px-2 py-1">
-                协助
+                道路2
                 <input
                   type="text"
                   className="mt-1 w-full border rounded px-1 py-0.5 text-xs"
@@ -271,7 +271,7 @@ export default function RecordsPage() {
               setPage(1);
             }}
           >
-            {[10, 20, 50].map((n) => (
+            {[20, 100, 200, 500].map((n) => (
               <option key={n} value={n}>
                 {n} / 页
               </option>
