@@ -22,7 +22,7 @@ export default function Navbar() {
     <nav className="w-full border-b bg-white sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex h-16 items-center justify-between">
         {/* Logo */}
-        <Link href="/" aria-label="返回首页" className="inline-flex items-center gap-3">
+        <Link href="/" aria-label="返回首页" className="inline-flex items-center gap-6">
           <Image
             src="/qrcode.png"    // 放在 public/logo.svg
             alt="MySite Logo"
@@ -31,7 +31,7 @@ export default function Navbar() {
             priority={true}
             style={{ height: "auto" }}
           />
-          <span className="text-2xl font-bold text-gray-800">Ai 建站</span>
+          <span className="text-xl font-bold text-blue-600">Ai 建站</span>
         </Link>
 
         {/* Desktop Menu */}

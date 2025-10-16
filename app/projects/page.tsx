@@ -68,7 +68,7 @@ export default function ProjectsPage() {
       (row) =>
         row.name?.toLowerCase().includes(lower) ||
         row.code?.toLowerCase().includes(lower) ||
-        row.name_company?.toLowerCase().includes(lower)||
+        row.name_company?.toLowerCase().includes(lower) ||
         row.manager?.toLowerCase().includes(lower)
     );
   }, [data, searchText, loading]);
@@ -139,6 +139,10 @@ export default function ProjectsPage() {
           key={filteredRows.length} // ✅ 强制刷新防止初始空白
           rows={filteredRows}
           columns={columns}
+          columnVisibilityModel={{
+            custom_status: false, 
+            node: false,
+          }}
           getRowId={(row) => row.$id}
           pageSizeOptions={[20, 50, 100]}
           checkboxSelection
