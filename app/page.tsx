@@ -69,11 +69,11 @@ function CardSide({ title, description, href, thumbnail, badge, external, cardda
 
 // ------------------ 数据 ------------------
 const ITEMS = [
-   { title: "代码拷贝", description: "copy                                     ****", href: "/codecopy", thumbnail: "/images/codecopy.png", carddate: "2025-10-13更新" },
-    { title: "表格v01", description: "工程信息                                         ****", href: "/projects", thumbnail: "/images/logowasu.png", carddate: "2025-10-16更新" },
-    { title: "文件管理", description: "上传下载                                         ****", href: "/files", thumbnail: "/images/zipdownload.png", carddate: "2025-10-14更新" },
-
-  ]
+  { title: "代码拷贝", description: "copy                                     ****", href: "/codecopy", thumbnail: "/images/codecopy.png", carddate: "2025-10-13更新" },
+  { title: "表格v01", description: "工程信息                                         ****", href: "/projects", thumbnail: "/images/logowasu.png", carddate: "2025-10-16更新" },
+  { title: "文件管理", description: "上传下载                                         ****", href: "/files", thumbnail: "/images/zipdownload.png", carddate: "2025-10-14更新" },
+  { title: "代维井信息", description: "代维井信息查看，拱墅区部分                         ***", href: "/daiwei", thumbnail: "/images/well.jpg", carddate: "2025-10-16" },
+]
 
 // ------------------ 页面 ------------------
 export default function CardGallery() {
@@ -92,7 +92,7 @@ export default function CardGallery() {
           ))}
         </section>
       </div>
-         
+
     </main>
   );
 }

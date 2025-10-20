@@ -78,7 +78,7 @@ export default function ProjectDetailPage() {
           title="材料清单"
           subtitle={`工程编号：${materials[0]?.project_code || "未知工程"}`}
           headers={[
-            { key: "id", label: "编号" },
+            { key: "code", label: "编号" },
             { key: "name", label: "材料名" },
             { key: "model", label: "型号" },
             { key: "unit", label: "单位" },
@@ -86,7 +86,7 @@ export default function ProjectDetailPage() {
             { key: "remark", label: "备注" },
           ]}
           data={materials.map((m) => ({
-            id: m.$id,
+            code: m.code,
             name: m.name,
             model: m.model,
             unit: m.unit,
