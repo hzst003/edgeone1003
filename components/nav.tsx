@@ -24,7 +24,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" aria-label="返回首页" className="inline-flex items-center gap-6">
           <Image
-            src="/qrcode.png"    // 放在 public/logo.svg
+            src="/xulogo.png"    // 放在 public/logo.svg
             alt="MySite Logo"
             width={45}
             height={45}
