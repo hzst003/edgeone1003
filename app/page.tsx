@@ -69,7 +69,6 @@ function CardSide({ title, description, href, thumbnail, badge, external, cardda
 
 // ------------------ 数据 ------------------
 const ITEMS = [
-  { title: "代码拷贝", description: "copy                                     ****", href: "/codecopy", thumbnail: "/images/codecopy.png", carddate: "2025-10-13更新" },
   { title: "表格v01", description: "工程信息                                         ****", href: "/projects", thumbnail: "/images/logowasu.png", carddate: "2025-10-16更新" },
   { title: "全局搜索", description: "至2025-172分册 支持多关健字与减号(-)表示不包括     ****", href: "/comprehensivesearch", thumbnail: "/images/Internetsearch.png", carddate: "2025-10-28更新" },
   { title: "文件管理", description: "上传下载                                         ****", href: "/files", thumbnail: "/images/zipdownload.png", carddate: "2025-10-14更新" },
@@ -94,6 +93,20 @@ export default function CardGallery() {
         </section>
       </div>
 
+          <div className="relative w-full">
+      {/* 页面底部前 5cm 位置 (约 100px) */}
+      <div className="absolute top-[300px] left-0 w-full flex ">
+        <Link
+          href="/codecopy"
+          className="px-1 py-2 rounded-full  text-blue-100 font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300"
+        >
+          Copy
+        </Link>
+      </div>
+      </div>
+
     </main>
   );
 }
+
+// { title: "代码拷贝  ", description: "copy                                     ****", href: "/codecopy", thumbnail: "/images/codecopy.png", carddate: "2025-10-13更新" },

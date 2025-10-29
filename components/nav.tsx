@@ -14,8 +14,8 @@ export default function Navbar() {
   const navLinks = [
     { name: "首页", href: "/" },
     { name: "服务", href: "/services" },
-    { name: "关于我们", href: "/about" },
-    { name: "联系我们", href: "/contact" },
+    { name: "关于", href: "/about" },
+    { name: "联系", href: "/contact" },
   ]
 
   return (
@@ -31,7 +31,7 @@ export default function Navbar() {
             priority={true}
             style={{ height: "auto" }}
           />
-          <span className="text-xl font-bold text-blue-600">Ai 建站</span>
+          <span className="text-xl font-bold text-blue-600">Ai Coding</span>
         </Link>
 
         {/* Desktop Menu */}
