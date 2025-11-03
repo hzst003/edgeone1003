@@ -1,5 +1,6 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
-// 在你的应用入口文件（如 index.tsx, App.tsx 或某个初始化文件）的顶部
+
 import { ModuleRegistry } from "ag-grid-community";
 import {
   AllCommunityModule,
