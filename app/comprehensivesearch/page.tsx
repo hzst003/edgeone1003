@@ -147,7 +147,7 @@ const buildFilter = (raw: string) => {
 
   return (
     <div className="max-w-4xl mx-auto p-6">
-      <h1 className="text-2xl font-semibold mb-4">文件下载</h1>
+      <h1 className="text-2xl font-semibold mb-4">文件检索</h1>
 
       {/* 搜索框 */}
       <form onSubmit={handleSearch} className="flex gap-2 mb-6">
