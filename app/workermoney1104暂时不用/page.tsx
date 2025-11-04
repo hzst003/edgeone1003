@@ -14,36 +14,36 @@ import "ag-grid-community/styles/ag-theme-alpine.css";
 import PocketBase from "pocketbase";
 
 
-
 export default function ProjectsPage() {
   const [rowData, setRowData] = useState<any[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true); // ✅ 加载状态
 
   useEffect(() => {
     const pb = new PocketBase(process.env.NEXT_PUBLIC_POCKETBASE_API);
-    const fetchData = async () => {
-      setLoading(true);
-      try {
-        let page = 1;
-        let allData: any[] = [];
-        while (true) {
-          const res = await pb.collection("workermoney2025").getList(page, 500, {
-            fields:
-              "subjects,unitprice,quantity,sum,projectname,projectcode,fence,remark,name1,name2,name3,name4",
-          });
-          allData = allData.concat(res.items);
-          if (res.page >= res.totalPages) break;
-          page++;
-        }
-        setRowData(allData);
-      } catch (err) {
-        console.error("PB error:", err);
-      } finally {
-        setLoading(false);
-      }
-    };
 
-    fetchData();
+    setLoading(true); // 开始加载
+    pb.collection("workermoney2025")
+      .getFullList()
+      .then((records) => {
+        setRowData(
+          records.map((r) => ({
+            subjects: r.subjects,
+            unitprice: r.unitprice,
+            quantity: r.quantity,
+            sum: r.sum,
+            projectname: r.projectname,
+            projectcode: r.projectcode,
+            fence: r.fence,
+            remark: r.remark,
+            name1: r.name1,
+            name2: r.name2,
+            name3: r.name3,
+            name4: r.name4,
+          }))
+        );
+      })
+      .catch((err) => console.error("PB error:", err))
+      .finally(() => setLoading(false)); // ✅ 加载完成
   }, []);
 
   const columnDefs = [
@@ -69,16 +69,17 @@ export default function ProjectsPage() {
       suppressAndOrCondition: true,
     },
     resizable: true,
-    floatingFilter: true,
+    floatingFilter: true, // ✅ 表头筛选行
   };
 
   return (
     <div className="p-4">
       <h1 className="text-xl font-bold mb-4 text-center">工程量与施工人</h1>
 
+      {/* ✅ 加载状态提示 */}
       {loading ? (
-        <div className="text-center text-gray-600 text-lg mt-20 animate-pulse">
-          正在加载数据，请稍候…
+        <div className="flex justify-center items-center h-[500px] text-gray-600 text-lg">
+          ⏳ 正在加载数据，请稍候...
         </div>
       ) : (
         <div className="ag-theme-alpine" style={{ height: 1000 }}>
@@ -88,10 +89,10 @@ export default function ProjectsPage() {
             defaultColDef={defaultColDef}
             pagination={true}
             paginationPageSize={20}
+            domLayout="normal"
           />
         </div>
       )}
     </div>
   );
 }
-
