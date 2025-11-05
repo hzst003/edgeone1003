@@ -73,7 +73,9 @@ const ITEMS = [
   { title: "文件检索", description: "至2025-172分册 支持多关健字与减号(-)表示不包括     ****", href: "/comprehensivesearch", thumbnail: "/images/Internetsearch.png", carddate: "2025-10-28更新" },
   { title: "文件管理", description: "上传下载                                         ****", href: "/files", thumbnail: "/images/zipdownload.png", carddate: "2025-10-14更新" },
   { title: "代维井信息", description: "代维井信息查看，拱墅区部分                         ***", href: "/daiwei", thumbnail: "/images/well.jpg", carddate: "2025-10-16" },
-   { title: "工程量与施工人", description: "2025-ST-001分册至172分册         *************    ", href: "/workermoney1103", thumbnail: "/images/chineseyuan.png", carddate: "2025-11-03"   },    
+   { title: "工程量与施工人", description: "2025-ST-001分册至172分册         *************    ", href: "/workermoney1103", thumbnail: "/images/chineseyuan.png", carddate: "2025-11-03"   },  
+    { title: "批量打印工程量表", description: " 简化操作       *************    ", href: "/printworkermoneys", thumbnail: "/images/printer.png", carddate: "2025-11-05"   },  
+     { title: "批量打印材料表", description: "  简化操作       *************    ", href: "/printmaterials", thumbnail: "/images/printer.png", carddate: "2025-11-05"   },    
 ]
 
 // ------------------ 页面 ------------------
