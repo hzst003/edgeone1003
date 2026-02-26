@@ -100,7 +100,7 @@ export default function CardGallery() {
       {/* 页面底部前 5cm 位置 (约 100px) */}
       <div className="absolute top-[300px] left-0 w-full flex ">
         <Link
-          href="/codecopy"
+          href="/codecopy1"
           className="px-1 py-2 rounded-full  text-blue-100 font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300"
         >
           Copy
