@@ -112,4 +112,4 @@ export default function CardGallery() {
   );
 }
 
-// { title: "代码拷贝  ", description: "copy                                     ****", href: "/codecopy", thumbnail: "/images/codecopy.png", carddate: "2025-10-13更新" },
+// { title: "代码拷贝  ", description: "copy                                     ****", href: "/codecopy1", thumbnail: "/images/codecopy.png", carddate: "2025-10-13更新" },
