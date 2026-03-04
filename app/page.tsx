@@ -71,7 +71,7 @@ function CardSide({ title, description, href, thumbnail, badge, external, cardda
 const ITEMS = [
   { title: "表格v01", description: "工程信息                                         ****", href: "/projects", thumbnail: "/images/logowasu.png", carddate: "2025-10-16更新" },
   { title: "文件检索", description: "至2026-12分册 支持多关健字与减号(-)表示不包括     ****", href: "/comprehensivesearch", thumbnail: "/images/Internetsearch.png", carddate: "2026-2月份更新" },
-  { title: "文件管理", description: "上传下载                                         ****", href: "/files", thumbnail: "/images/zipdownload.png", carddate: "2025-10-14更新" },
+  
   { title: "代维井信息", description: "代维井信息查看，拱墅区部分                         ***", href: "/daiwei", thumbnail: "/images/well.jpg", carddate: "2025-10-16" },
   
  
@@ -104,6 +104,12 @@ export default function CardGallery() {
           className="px-1 py-2 rounded-full  text-blue-100 font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300"
         >
           Copy
+        </Link>
+                        <Link
+          href="/files"
+          className="px-1 py-2 rounded-full  text-blue-100 font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300"
+        >
+          文件上传下载
         </Link>
       </div>
       </div>
