@@ -103,7 +103,7 @@ export default function RecordsClient({ data }: Props) {
           <thead className="bg-gray-50">
             <tr>
               <th className="border px-2 py-1 text-center w-12">#</th>
-              <th className="border px-2 py-1">照片</th>
+              <th className="border px-2 py-1 min-w-[180px] w-[180px]">照片</th>
               <th className="border px-2 py-1">
                 地点(预览退出按ESC)
                 <input
@@ -184,16 +184,16 @@ export default function RecordsClient({ data }: Props) {
                 <td className="border px-2 py-1 text-center">
                   {(page - 1) * pageSize + idx + 1}
                 </td>
-                <td className="border px-2 py-1">
+                <td className="border px-2 py-1 align-middle min-w-[180px] w-[180px]">
                   {row.photo ? (
                     <img
                       src={row.photo}
                       alt="photo"
-                      className="w-12 h-12 object-cover rounded border border-gray-200 cursor-pointer"
+                      className="w-28 h-28 object-cover rounded border border-gray-200 cursor-pointer"
                       onClick={() => handlePreview(row.photo!)}
                     />
                   ) : (
-                    <div className="w-12 h-12 flex items-center justify-center bg-gray-100 text-gray-400 text-xs rounded border border-gray-200">
+                    <div className="w-28 h-28 flex items-center justify-center bg-gray-100 text-gray-400 text-xs rounded border border-gray-200">
                       无
                     </div>
                   )}
