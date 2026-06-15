@@ -70,7 +70,7 @@ function CardSide({ title, description, href, thumbnail, badge, external, cardda
 // ------------------ 数据 ------------------
 const ITEMS = [
   { title: "表格v01", description: "工程信息                                         ****", href: "/projects", thumbnail: "/images/logowasu.png", carddate: "2025-10-16更新" },
-  { title: "文件检索", description: "至2026-44分册 支持多关健字与减号(-)表示不包括     ****", href: "/comprehensivesearch", thumbnail: "/images/Internetsearch.png", carddate: "2026-4月份更新" },
+  { title: "文件检索", description: "至2026-75分册 支持多关健字与减号(-)表示不包括     ****", href: "/comprehensivesearch", thumbnail: "/images/Internetsearch.png", carddate: "2026-6月份更新" },
   
   { title: "代维井信息", description: "代维井信息查看，拱墅区部分                         ***", href: "/daiwei", thumbnail: "/images/well.jpg", carddate: "2025-10-16" },
   
